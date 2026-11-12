@@ -1,0 +1,30 @@
+[Unit]
+Description=GarudaShield AI SSH Authentication Log Collector
+Wants=network-online.target
+After=network-online.target garudashield.service
+
+[Service]
+Type=simple
+User=garudashield-collector
+Group=garudashield-collector
+WorkingDirectory=/opt/garudashield-collector
+EnvironmentFile=-/etc/garudashield-collector.env
+ExecStart=/opt/garudashield/.venv/bin/python /opt/garudashield-collector/garudashield_collector.py
+Restart=on-failure
+RestartSec=5s
+UMask=0077
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectHome=true
+ProtectSystem=strict
+ProtectKernelTunables=true
+ProtectKernelModules=true
+ProtectControlGroups=true
+LockPersonality=true
+MemoryDenyWriteExecute=true
+RestrictAddressFamilies=AF_UNIX AF_INET AF_INET6
+ReadOnlyPaths=/var/log/secure
+ReadWritePaths=/var/lib/garudashield-collector
+
+[Install]
+WantedBy=multi-user.target

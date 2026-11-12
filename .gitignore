@@ -1,0 +1,67 @@
+/.phpunit.cache
+/node_modules
+/public/build
+/public/hot
+/public/storage
+/storage/*.key
+/storage/pail
+/vendor
+__pycache__/
+*.py[cod]
+.env
+.env.backup
+.env.production
+.phpactor.json
+.phpunit.result.cache
+Homestead.json
+Homestead.yaml
+npm-debug.log
+yarn-error.log
+/auth.json
+/.fleet
+/.idea
+/.nova
+/.vscode
+/.zed
+
+# Dependencies
+/vendor/
+/node_modules/
+
+# Laravel generated files
+/public/build/
+/public/hot
+/storage/*.key
+/storage/logs/
+/storage/framework/cache/
+/storage/framework/sessions/
+/storage/framework/testing/
+/storage/framework/views/
+
+# Database and local data
+/database/*.sqlite
+/database/*.sqlite-*
+*.db
+*.db-journal
+
+# Logs and temporary files
+*.log
+/.phpunit.cache/
+/bootstrap/cache/*.php
+
+# Environment files
+.env.*
+!.env.example
+# Laravel runtime data
+/storage/framework/sessions/*
+/storage/framework/views/*
+/storage/framework/cache/*
+/storage/logs/*
+/bootstrap/cache/*.php
+
+# Keep placeholder files
+!/storage/framework/sessions/.gitignore
+!/storage/framework/views/.gitignore
+!/storage/framework/cache/.gitignore
+!/storage/logs/.gitignore
+!/bootstrap/cache/.gitignore
